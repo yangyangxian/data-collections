@@ -68,6 +68,6 @@ export const getAnimals = (): Array<Animal> => {
             'Crocuta crocuta', 60, '/images/animals/spottedhyena.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
 
         );
-           
+        
     return animalList;
 };

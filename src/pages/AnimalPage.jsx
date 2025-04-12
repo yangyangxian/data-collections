@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
-import { getAnimals } from '../dataLayer/DataRetriever.tsx';
+import { getAnimals } from '../dataRepositories/AnimalRepository.tsx';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
