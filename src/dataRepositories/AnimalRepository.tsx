@@ -66,7 +66,27 @@ export const getAnimals = (): Array<Animal> => {
             'Panthera tigris', 64, '/images/animals/tiger.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
         new Animal('22', 'Spotted hyena斑鬣狗', 'Crocuta斑鬣狗属', 'Hyaenidae鬣狗科',
             'Crocuta crocuta', 60, '/images/animals/spottedhyena.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
-
+        new Animal('23', 'Giraffe长颈鹿', 'Giraffa长颈鹿属', 'Giraffidae长颈鹿科',
+            'Giraffa tippelskirchi', 60, '/images/animals/giraffe.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('24', 'African buffalo非洲水牛', 'Syncerus非洲水牛属', 'Bovidae牛科',
+            'Syncerus caffer', 56, '/images/animals/africanbuffalo.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('25', 'Brown bear棕熊', 'Ursus熊属', 'Ursidae熊科',
+            'Ursus arctos', 56, '/images/animals/brownbear.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('26', 'American black bear美洲黑熊', 'Ursus熊属', 'Ursidae熊科',
+            'Ursus americanus', 56, '/images/animals/americanblackbear.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('27', 'Black rhinoceros黑犀', 'Diceros黑犀属', 'Rhinocerotidae犀科',
+            'Diceros bicornis', 55, '/images/animals/blackrhinoceros.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('28', 'Common warthog', 'Phacochoerus疣猪属', 'Suidae猪科',
+            'Phacochoerus africanus', 55, '/images/animals/commonwarthog.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('29', 'Human人类', 'Homo人属', 'Hominidae人科',
+            'Homo sapiens', 44, '/images/animals/human.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('30', 'Common wombat塔斯马尼亚袋熊', 'Vombatus袋熊属', 'Vombatidae袋熊科',
+            'Vombatus ursinus', 40, '/images/animals/commonwombat.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('31', 'Hippopotamus', 'Hippopotamus河马属', 'Hippopotamidae河马科',
+            'Hippopotamus amphibius', 30, '/images/animals/hippopotamus.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),
+        new Animal('32', 'Asian elephant亚洲象', 'Elephas象属', 'Elephantidae象科',
+            'Elephas maximus', 25, '/images/animals/asianelepant.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals'),           
+        
         );
         
     return animalList;
