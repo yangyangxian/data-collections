@@ -5,12 +5,13 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 
-import Button from '@mui/material/Button';
+import { getCountries } from '../dataRepositories/CountryRepository.tsx';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
-    textAlign: 'center',
+    marginTop: theme.spacing(1),
+    //textAlign: 'center',
     color: (theme.vars ?? theme).palette.text.secondary,
     ...theme.applyStyles('dark', {
         backgroundColor: '#1A2027',
@@ -19,54 +20,40 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const columns = [
     {
-        field: 'id', headerName: 'ID',
-        align: 'center',
-        width: 60
+        field: 'id', headerName: 'ID', width: 60,
     },
     {
-        field: 'country', headerName: 'Country',
-        width: 120
+        field: 'name_ch', headerName: '国家', width: 120,
     },
     {
-        field: 'area',
-        headerName: 'Area',
-        type: 'number',
-        width: 130,
+        field: 'name', headerName: 'Country', width: 120,
+    },
+    {
+        field: 'area', headerName: 'Area', type: 'number', width: 130,
     }
 ];
 
-const rows = [
-    { id: 1, country: 'Russia', area: 17098246 },
-    { id: 2, country: 'Canada', area: 9984670 },
-    { id: 3, country: 'China', area: 9600000 },
-    { id: 4, country: 'United States', area: 9373000 },
-    { id: 5, country: 'Brazil', area: 8515770 },
-    { id: 6, country: 'Australia', area: 7692024 },
-    { id: 7, country: 'India', area: 3287263 },
-    { id: 8, country: 'Argentina', area: 2780400 },
-    { id: 9, country: 'Kazakhstan', area: 2724902 },
-    { id: 10, country: 'Algeria', area: 2380000 },
-];
+const rows = getCountries();
 
-const paginationModel = { page: 0, pageSize: 50 };
+const paginationModel = { page: 0, pageSize: 20 };
 
 export default function CountryPage() {
     return (
         <Box>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                <Grid size="auto">
-                    <Button variant="contained">TestMe</Button>
-                </Grid>
                 <Grid size={6}>
                     <Item>
                         <DataGrid
+                            rowHeight={40}
+                            columnHeaderHeight={45}
                             rows={rows}
                             columns={columns}
                             initialState={{ pagination: { paginationModel } }}
-                            pageSizeOptions={[25, 50]}
+                            pageSizeOptions={[10, 20]}
                             sx={{ border: 0 }}
                         />
                     </Item>
+                    <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
                 </Grid>
                 <Grid size="grow">
                     <Item>4</Item>
