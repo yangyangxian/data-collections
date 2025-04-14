@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 
-import { getCountries } from '../dataRepositories/CountryRepository.tsx';
+import { getCountries, getProvinces } from '../dataRepositories/CountryRepository.tsx';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -32,8 +32,23 @@ const columns = [
         field: 'area', headerName: 'Area', type: 'number', width: 130,
     }
 ];
-
 const rows = getCountries();
+
+const columnsProvinces = [
+    {
+        field: 'id', headerName: 'ID', width: 60,
+    },
+    {
+        field: 'name_ch', headerName: '省份', width: 120,
+    },
+    {
+        field: 'name', headerName: 'Province', width: 120,
+    },
+    {
+        field: 'area', headerName: 'Area', type: 'number', width: 130,
+    }
+];
+const rowsProvinces = getProvinces('1');
 
 const paginationModel = { page: 0, pageSize: 20 };
 
@@ -55,8 +70,19 @@ export default function CountryPage() {
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
                 </Grid>
-                <Grid size="grow">
-                    <Item>4</Item>
+                <Grid size={6}>
+                    <Item>
+                        <DataGrid
+                            rowHeight={40}
+                            columnHeaderHeight={45}
+                            rows={rowsProvinces}
+                            columns={columnsProvinces}
+                            initialState={{ pagination: { paginationModel } }}
+                            pageSizeOptions={[10, 20]}
+                            sx={{ border: 0 }}
+                        />
+                    </Item>
+                    <Item><a href='https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%9C%81%E7%BA%A7%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%9C%9F%E5%9C%B0%E9%9D%A2%E7%A7%AF%E5%88%97%E8%A1%A8'>Source</a></Item>
                 </Grid>
             </Grid>
         </Box>
