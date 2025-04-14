@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
@@ -39,7 +40,7 @@ const columnsProvinces = [
         field: 'id', headerName: 'ID', width: 60,
     },
     {
-        field: 'name_ch', headerName: '省份', width: 120,
+        field: 'name_ch', headerName: '省份', width: 160,
     },
     {
         field: 'name', headerName: 'Province', width: 120,
@@ -48,11 +49,18 @@ const columnsProvinces = [
         field: 'area', headerName: 'Area', type: 'number', width: 130,
     }
 ];
-const rowsProvinces = getProvinces('1');
 
 const paginationModel = { page: 0, pageSize: 20 };
 
 export default function CountryPage() {
+    const [selectedCountryId, setSelectedCountryId] = useState('1');
+
+    const handleCountryRowClick = (params) => {
+        setSelectedCountryId(params.id);
+    };
+
+    let rowsProvinces = getProvinces(selectedCountryId);
+
     return (
         <Box>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
@@ -66,6 +74,7 @@ export default function CountryPage() {
                             initialState={{ pagination: { paginationModel } }}
                             pageSizeOptions={[10, 20]}
                             sx={{ border: 0 }}
+                            onRowClick={handleCountryRowClick}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>

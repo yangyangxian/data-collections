@@ -42,6 +42,10 @@ export const getCountries = (): Array<Country> => {
 };
 
 export const getProvinces = (countryId: string): Array<Province> => {
+    console.log(countryId);
+    if (countryId != '1') {
+        return [];
+    }
     var provincesList: Province[] = [];
     provincesList.push(
         new Province('1', '新疆维吾尔自治区', 'Xinjiang', 1631585),
