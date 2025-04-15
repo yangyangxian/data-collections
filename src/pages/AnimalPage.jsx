@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { getAnimals } from '../dataRepositories/AnimalRepository.tsx';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -16,6 +16,12 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const columns = [
+    { 
+        field: 'rowNum' , 
+        headerName: '排名', 
+        filterable: false,
+        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
+    },
     {   field: 'id', headerName: 'ID', width: 60 },
     {   field: 'name', headerName: 'Name', width: 240 },
     {   field: 'family', headerName: '科', width: 200  },
@@ -43,6 +49,9 @@ const columns = [
 const rows = getAnimals();
 
 const paginationModel = { page: 0, pageSize: 50 };
+const columnVisibilityModel = {
+    id: false,
+};
 
 export default function AnimalPage() {
     return (
@@ -50,11 +59,15 @@ export default function AnimalPage() {
             <Grid size='auto'>
                 <Item>
                     <DataGrid
+                        slots={{
+                            toolbar: GridToolbar,
+                        }}
                         rowHeight={110}
                         rows={rows}
                         columns={columns}
                         initialState={{ pagination: { paginationModel } }}
                         pageSizeOptions={[25, 50]}
+                        columnVisibilityModel={columnVisibilityModel}
                         sx={{ border: 0 }}
                         onCellClick={(params, event) => {
                             console.log('点击的列字段:', params.field);

@@ -80,7 +80,7 @@ export const getProvinces = (countryId: string): Array<Province> => {
         new Province('29', '4', '北京市', 'Beijing', 16406),
         new Province('30', '4', '天津市', 'Tianjin', 11917),
         new Province('31', '4', '上海市', 'Shanghai', 8359),
-        new Province('32', '3', '加利福尼亚', 'California', 163695),
+        new Province('32', '3', '加利福尼亚', 'California', 423970),
     );
     var returnList: Province[] = [];
     provincesList.forEach((province) => {  

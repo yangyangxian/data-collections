@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 import { getCountries, getProvinces } from '../dataRepositories/CountryRepository.tsx';
 
@@ -20,8 +20,14 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const columns = [
+    { 
+        field: 'rowNum' , 
+        headerName: '排名', 
+        filterable: false,
+        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
+    },
     {
-        field: 'id', headerName: 'ID', width: 60,
+        field: 'id', headerName: 'ID', width: 60, hide: true 
     },
     {
         field: 'name_ch', headerName: '国家', width: 120,
@@ -36,6 +42,12 @@ const columns = [
 const rows = getCountries();
 
 const columnsProvinces = [
+    { 
+        field: 'rowNum' , 
+        headerName: '排名', 
+        filterable: false,
+        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
+    },
     {
         field: 'id', headerName: 'ID', width: 60,
     },
@@ -51,6 +63,9 @@ const columnsProvinces = [
 ];
 
 const paginationModel = { page: 0, pageSize: 20 };
+const columnVisibilityModel = {
+    id: false,
+};
 
 export default function CountryPage() {
     const [selectedCountryId, setSelectedCountryId] = useState('1');
@@ -67,6 +82,9 @@ export default function CountryPage() {
                 <Grid size={6}>
                     <Item>
                         <DataGrid
+                            slots={{
+                                toolbar: GridToolbar,
+                            }}
                             rowHeight={40}
                             columnHeaderHeight={45}
                             rows={rows}
@@ -75,6 +93,7 @@ export default function CountryPage() {
                             pageSizeOptions={[10, 20]}
                             sx={{ border: 0 }}
                             onRowClick={handleCountryRowClick}
+                            columnVisibilityModel={columnVisibilityModel}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
@@ -89,6 +108,7 @@ export default function CountryPage() {
                             initialState={{ pagination: { paginationModel } }}
                             pageSizeOptions={[10, 20]}
                             sx={{ border: 0 }}
+                            columnVisibilityModel={columnVisibilityModel}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%9C%81%E7%BA%A7%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%9C%9F%E5%9C%B0%E9%9D%A2%E7%A7%AF%E5%88%97%E8%A1%A8'>Source</a></Item>
