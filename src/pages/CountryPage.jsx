@@ -1,23 +1,11 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 import { getCountries, getProvinces } from '../dataRepositories/CountryRepository.tsx';
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    marginTop: theme.spacing(1),
-    //textAlign: 'center',
-    color: (theme.vars ?? theme).palette.text.secondary,
-    ...theme.applyStyles('dark', {
-        backgroundColor: '#1A2027',
-    }),
-}));
+import { DataTable } from '../components/DataTable.jsx';
+import { Item } from '../const/consts';
 
 const columns = [
     { 
@@ -62,11 +50,6 @@ const columnsProvinces = [
     }
 ];
 
-const paginationModel = { page: 0, pageSize: 20 };
-const columnVisibilityModel = {
-    id: false,
-};
-
 export default function CountryPage() {
     const [selectedCountryId, setSelectedCountryId] = useState('1');
 
@@ -81,34 +64,23 @@ export default function CountryPage() {
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid size={6}>
                     <Item>
-                        <DataGrid
-                            slots={{
-                                toolbar: GridToolbar,
-                            }}
+                        <DataTable
                             rowHeight={40}
                             columnHeaderHeight={45}
                             rows={rows}
                             columns={columns}
-                            initialState={{ pagination: { paginationModel } }}
-                            pageSizeOptions={[10, 20]}
-                            sx={{ border: 0 }}
                             onRowClick={handleCountryRowClick}
-                            columnVisibilityModel={columnVisibilityModel}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
                 </Grid>
                 <Grid size={6}>
                     <Item>
-                        <DataGrid
+                        <DataTable
                             rowHeight={40}
                             columnHeaderHeight={45}
                             rows={rowsProvinces}
                             columns={columnsProvinces}
-                            initialState={{ pagination: { paginationModel } }}
-                            pageSizeOptions={[10, 20]}
-                            sx={{ border: 0 }}
-                            columnVisibilityModel={columnVisibilityModel}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%9C%81%E7%BA%A7%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%9C%9F%E5%9C%B0%E9%9D%A2%E7%A7%AF%E5%88%97%E8%A1%A8'>Source</a></Item>

@@ -1,19 +1,8 @@
 ﻿import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import { getAnimals } from '../dataRepositories/AnimalRepository.tsx';
-
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: (theme.vars ?? theme).palette.text.secondary,
-    ...theme.applyStyles('dark', {
-        backgroundColor: '#1A2027',
-    }),
-}));
+import { DataTable } from '../components/DataTable.jsx';
+import { Item } from '../const/consts';
 
 const columns = [
     { 
@@ -48,27 +37,14 @@ const columns = [
 
 const rows = getAnimals();
 
-const paginationModel = { page: 0, pageSize: 50 };
-const columnVisibilityModel = {
-    id: false,
-};
-
 export default function AnimalPage() {
     return (
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid size='auto'>
                 <Item>
-                    <DataGrid
-                        slots={{
-                            toolbar: GridToolbar,
-                        }}
-                        rowHeight={110}
+                    <DataTable
                         rows={rows}
                         columns={columns}
-                        initialState={{ pagination: { paginationModel } }}
-                        pageSizeOptions={[25, 50]}
-                        columnVisibilityModel={columnVisibilityModel}
-                        sx={{ border: 0 }}
                         onCellClick={(params, event) => {
                             console.log('点击的列字段:', params.field);
                             console.log('行数据:', params.row);
