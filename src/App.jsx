@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css';
 
 import TabPanel from './pages/TabPanel.jsx';
@@ -11,11 +10,6 @@ console.debug("this is from top level of App.jsx");
 
 function App() {
     console.debug("this is from top level of App function component");
-    const [forecasts, setForecasts] = useState();
-
-    useEffect(() => {
-        //populateWeatherData();
-    }, []);
 
     return (
         <div>

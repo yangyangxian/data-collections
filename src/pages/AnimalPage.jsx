@@ -2,7 +2,7 @@
 import Grid from '@mui/material/Grid';
 import { getAnimals } from '../dataRepositories/AnimalRepository.tsx';
 import { DataTable } from '../components/DataTable.jsx';
-import { Item } from '../const/Consts';
+import { Item } from '../const/Consts.jsx';
 
 const columns = [
     { 

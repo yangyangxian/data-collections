@@ -5,54 +5,34 @@ import Box from '@mui/material/Box';
 
 import { getCountries, getProvinces } from '../dataRepositories/CountryRepository.tsx';
 import { DataTable } from '../components/DataTable.jsx';
-import { Item } from '../const/Consts';
+import { Item } from '../const/Consts.jsx';
 
 console.debug("this is from top level of CountryPage.jsx");
 
 const columns = [
-    { 
-        field: 'rowNum' , 
+    {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
-        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
-    },
-    {
-        field: 'id', headerName: 'ID', width: 60, hide: true 
-    },
-    {
-        field: 'name_ch', headerName: '国家', width: 120,
-    },
-    {
-        field: 'name', headerName: 'Country', width: 120,
-    },
-    {
-        field: 'area', headerName: 'Area', type: 'number', width: 130,
-    }
+        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
+    {   field: 'id', headerName: 'ID', width: 60, hide: true },
+    {   field: 'name_ch', headerName: '国家', width: 120, },
+    {   field: 'name', headerName: 'Country', width: 120, },
+    {   field: 'area', headerName: 'Area', type: 'number', width: 130,}
 ];
 
 const columnsProvinces = [
-    { 
-        field: 'rowNum' , 
+    {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
-        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
-    },
-    {
-        field: 'id', headerName: 'ID', width: 60,
-    },
-    {
-        field: 'name_ch', headerName: '省份', width: 160,
-    },
-    {
-        field: 'name', headerName: 'Province', width: 120,
-    },
-    {
-        field: 'area', headerName: 'Area', type: 'number', width: 130,
-    }
+        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
+    {   field: 'id', headerName: 'ID', width: 60, },
+    {   field: 'name_ch', headerName: '省份', width: 160, },
+    {   field: 'name', headerName: 'Province', width: 120, },
+    {   field: 'area', headerName: 'Area', type: 'number', width: 130, }
 ];
 
 let rows = getCountries();
-let provinces = getProvinces(rows.length > 0 ? rows[0].id : ""); // Default to the first country
+let provinces = getProvinces(rows.length > 0 ? rows[0].id : "");
 
 export default function CountryPage() {
     console.debug("this is from top level of CountryPage function component");
