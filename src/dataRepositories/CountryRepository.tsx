@@ -28,6 +28,7 @@ class Province {
 }
 
 export const getCountries = (): Array<Country> => {
+    console.log("this is getCountries()");
     var countryList: Country[] = [];
     countryList.push(
         new Country('1', '俄罗斯', 'Russia', 17234034),

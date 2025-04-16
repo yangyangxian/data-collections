@@ -27,7 +27,6 @@ const columns = [
         field: 'area', headerName: 'Area', type: 'number', width: 130,
     }
 ];
-const rows = getCountries();
 
 const columnsProvinces = [
     { 
@@ -50,14 +49,16 @@ const columnsProvinces = [
     }
 ];
 
+let rows = getCountries();
+let provinces = getProvinces(rows.length > 0 ? rows[0].id : ""); // Default to the first country
+
 export default function CountryPage() {
     const [selectedCountryId, setSelectedCountryId] = useState('1');
-
     const handleCountryRowClick = (params) => {
         setSelectedCountryId(params.id);
+        //The codes here will be executed when the component is rendered, so i moved the getProvinces function to the handleCountryRowClick function
+        provinces = getProvinces(params.id);
     };
-
-    let rowsProvinces = getProvinces(selectedCountryId);
 
     return (
         <Box>
@@ -79,7 +80,7 @@ export default function CountryPage() {
                         <DataTable
                             rowHeight={40}
                             columnHeaderHeight={45}
-                            rows={rowsProvinces}
+                            rows={provinces}
                             columns={columnsProvinces}
                         />
                     </Item>
