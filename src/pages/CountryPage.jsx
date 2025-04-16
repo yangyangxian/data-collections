@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 
 import { getCountries, getProvinces } from '../dataRepositories/CountryRepository.tsx';
 import { DataTable } from '../components/DataTable.jsx';
-import { Item } from '../const/consts';
+import { Item } from '../const/Consts';
 
 console.debug("this is from top level of CountryPage.jsx");
 
