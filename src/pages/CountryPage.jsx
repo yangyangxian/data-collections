@@ -7,6 +7,8 @@ import { getCountries, getProvinces } from '../dataRepositories/CountryRepositor
 import { DataTable } from '../components/DataTable.jsx';
 import { Item } from '../const/consts';
 
+console.debug("this is from top level of CountryPage.jsx");
+
 const columns = [
     { 
         field: 'rowNum' , 
@@ -53,6 +55,8 @@ let rows = getCountries();
 let provinces = getProvinces(rows.length > 0 ? rows[0].id : ""); // Default to the first country
 
 export default function CountryPage() {
+    console.debug("this is from top level of CountryPage function component");
+
     const [selectedCountryId, setSelectedCountryId] = useState('1');
     const handleCountryRowClick = (params) => {
         setSelectedCountryId(params.id);

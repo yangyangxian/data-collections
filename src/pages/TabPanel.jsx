@@ -8,6 +8,8 @@ import PhotoWall from './PhotoWall.jsx';
 import CountryPage from './CountryPage.jsx';
 import AnimalPage from './AnimalPage.jsx';
 
+console.debug("this is from top level of TabPanel.jsx");
+
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -38,7 +40,8 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
-    const [value, setValue] = React.useState(0);
+    console.debug("this is from top level of TabPanel function component");
+    const [value, setValue] = React.useState(1);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
