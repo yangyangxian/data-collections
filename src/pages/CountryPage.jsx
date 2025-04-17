@@ -32,16 +32,17 @@ const columnsProvinces = [
 ];
 
 let rows = getCountries();
-let provinces = getProvinces(rows.length > 0 ? rows[0].id : "");
+//let provinces = getProvinces("");
 
 export default function CountryPage() {
     console.debug("this is from top level of CountryPage function component");
 
-    const [selectedCountryId, setSelectedCountryId] = useState('1');
+    const [selectedCountryId, setSelectedCountryId] = useState('');
+    const [provinces, setProvinces] = useState(getProvinces(selectedCountryId));
     const handleCountryRowClick = (params) => {
         setSelectedCountryId(params.id);
         //The codes here will be executed when the component is rendered, so i moved the getProvinces function to the handleCountryRowClick function
-        provinces = getProvinces(params.id);
+        setProvinces(getProvinces(params.id));
     };
 
     return (
