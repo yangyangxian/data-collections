@@ -15,8 +15,6 @@ export class DataTable extends React.Component {
             <DataGrid
                 {...this.props}
                 slots={{ toolbar: GridToolbar, }}
-                paginationModel= { this.props.paginationModel || { page: 0, pageSize: 50 } }
-                pageSizeOptions= { this.props.pageSizeOptions || [25, 50]}
                 columnVisibilityModel = { this.props.columnVisibilityModel ||{
                     id: false,
                 }}
