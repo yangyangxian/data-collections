@@ -1,17 +1,18 @@
 import countriesData from '../../public/data/countries.json';
 
 class Country {
-    constructor(id:string, name_ch:string, name:string, area:number) {
+    constructor(id:string, name_ch:string, name:string, area:number, population?:number) {
         this.id = id
-
         this.name_ch = name_ch
         this.name = name
         this.area = area
+        this.population = population
     }  
     id: string;
     name_ch: string;
     name: string;
     area: number;
+    population?: number;
 }
 
 class Province {
@@ -31,11 +32,12 @@ class Province {
 
 export const getCountries = (): Array<Country> => {
     console.log("this is getCountries()");
-    return countriesData.map((item, idx) => new Country(
+    return countriesData.map((item) => new Country(
         String(item.id),
         item.name_ch,
         item.name,
-        item.area
+        item.area,
+        item.population
     ));
 };
 

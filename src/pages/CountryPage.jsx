@@ -13,11 +13,13 @@ const columns = [
     {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
+        width: 50,
         renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, hide: true },
     {   field: 'name_ch', headerName: '国家', width: 120, },
     {   field: 'name', headerName: 'Country', width: 150, },
-    {   field: 'area', headerName: 'Area', type: 'number', width: 130,}
+    {   field: 'area', headerName: 'Area', type: 'number', width: 130,},
+    {   field: 'population', headerName: 'Population', type: 'number', width: 130,}
 ];
 
 const columnsProvinces = [
