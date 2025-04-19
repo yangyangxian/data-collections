@@ -16,7 +16,7 @@ const columns = [
         renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, hide: true },
     {   field: 'name_ch', headerName: '国家', width: 120, },
-    {   field: 'name', headerName: 'Country', width: 120, },
+    {   field: 'name', headerName: 'Country', width: 150, },
     {   field: 'area', headerName: 'Area', type: 'number', width: 130,}
 ];
 
@@ -27,7 +27,7 @@ const columnsProvinces = [
         renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, },
     {   field: 'name_ch', headerName: '省份', width: 160, },
-    {   field: 'name', headerName: 'Province', width: 120, },
+    {   field: 'name', headerName: 'Province', width: 200, },
     {   field: 'area', headerName: 'Area', type: 'number', width: 130, }
 ];
 

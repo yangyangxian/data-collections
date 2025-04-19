@@ -1,3 +1,5 @@
+import countriesData from '../../public/data/countries.json';
+
 class Country {
     constructor(id:string, name_ch:string, name:string, area:number) {
         this.id = id
@@ -29,85 +31,12 @@ class Province {
 
 export const getCountries = (): Array<Country> => {
     console.log("this is getCountries()");
-    var countryList: Country[] = [];
-    countryList.push(
-        new Country('1', '俄罗斯', 'Russia', 17234034),
-        new Country('2', '加拿大', 'Canada', 9984670),
-        new Country('3', '美国', 'United States', 9833520),
-        new Country('4', '中国', 'China', 9596960),
-        new Country('5', '巴西', 'Brazil', 8515770),
-        new Country('6', '澳大利亚', 'Australia', 7692500),
-        new Country('7', '印度', 'India', 3287263),
-        new Country('8', '阿根廷', 'Argentina', 2796476),
-        new Country('9', '哈萨克斯坦', 'Kazakhstan', 2724900),
-        new Country('10', '阿尔及利亚', 'Algeria', 2381741),
-        new Country('11', '阿富汗', 'Afghanistan', 652230),
-        new Country('12', '安哥拉', 'Angola', 1246700),
-        new Country('13', '阿根廷', 'Argentina', 2780400),
-        new Country('14', '澳大利亚', 'Australia', 7692024),
-        new Country('15', '奥地利', 'Austria', 83879),
-        new Country('16', '孟加拉国', 'Bangladesh', 147570),
-        new Country('17', '比利时', 'Belgium', 30528),
-        new Country('18', '玻利维亚', 'Bolivia', 1098581),
-        new Country('19', '巴西', 'Brazil', 8515767),
-        new Country('20', '加拿大', 'Canada', 9984670),
-        new Country('21', '智利', 'Chile', 756102),
-        new Country('22', '中国', 'China', 9596961),
-        new Country('23', '哥伦比亚', 'Colombia', 1141748),
-        new Country('24', '刚果民主共和国', 'Congo (DRC)', 2344858),
-        new Country('25', '丹麦', 'Denmark', 43094),
-        new Country('26', '埃及', 'Egypt', 1002450),
-        new Country('27', '芬兰', 'Finland', 338424),
-        new Country('28', '法国', 'France', 551695),
-        new Country('29', '德国', 'Germany', 357022),
-        new Country('30', '希腊', 'Greece', 131957),
-        new Country('31', '印度', 'India', 3287263),
-        new Country('32', '印度尼西亚', 'Indonesia', 1904569),
-        new Country('33', '伊朗', 'Iran', 1648195),
-        new Country('34', '意大利', 'Italy', 301340),
-        new Country('35', '日本', 'Japan', 377975),
-        new Country('36', '哈萨克斯坦', 'Kazakhstan', 2724900),
-        new Country('37', '肯尼亚', 'Kenya', 580367),
-        new Country('38', '马来西亚', 'Malaysia', 330803),
-        new Country('39', '墨西哥', 'Mexico', 1964375),
-        new Country('40', '蒙古', 'Mongolia', 1564110),
-        new Country('41', '摩洛哥', 'Morocco', 446550),
-        new Country('42', '莫桑比克', 'Mozambique', 801590),
-        new Country('43', '缅甸', 'Myanmar', 676578),
-        new Country('44', '尼泊尔', 'Nepal', 147181),
-        new Country('45', '荷兰', 'Netherlands', 41543),
-        new Country('46', '新西兰', 'New Zealand', 268838),
-        new Country('47', '尼日利亚', 'Nigeria', 923768),
-        new Country('48', '挪威', 'Norway', 385207),
-        new Country('49', '巴基斯坦', 'Pakistan', 881913),
-        new Country('50', '秘鲁', 'Peru', 1285216),
-        new Country('51', '菲律宾', 'Philippines', 300000),
-        new Country('52', '波兰', 'Poland', 312696),
-        new Country('53', '葡萄牙', 'Portugal', 92212),
-        new Country('54', '卡塔尔', 'Qatar', 11586),
-        new Country('55', '罗马尼亚', 'Romania', 238397),
-        new Country('56', '沙特阿拉伯', 'Saudi Arabia', 2149690),
-        new Country('57', '塞尔维亚', 'Serbia', 77474),
-        new Country('58', '新加坡', 'Singapore', 728),
-        new Country('59', '南非', 'South Africa', 1219090),
-        new Country('60', '韩国', 'South Korea', 100210),
-        new Country('61', '西班牙', 'Spain', 505990),
-        new Country('62', '瑞典', 'Sweden', 450295),
-        new Country('63', '瑞士', 'Switzerland', 41285),
-        new Country('64', '叙利亚', 'Syria', 185180),
-        new Country('65', '泰国', 'Thailand', 513120),
-        new Country('66', '土耳其', 'Turkey', 783562),
-        new Country('67', '乌克兰', 'Ukraine', 603500),
-        new Country('68', '阿联酋', 'United Arab Emirates', 83600),
-        new Country('69', '英国', 'United Kingdom', 243610),
-        new Country('70', '美国', 'United States', 9833517),
-        new Country('71', '乌兹别克斯坦', 'Uzbekistan', 447400),
-        new Country('72', '委内瑞拉', 'Venezuela', 916445),
-        new Country('73', '越南', 'Vietnam', 331212),
-        new Country('74', '也门', 'Yemen', 527968),
-        new Country('75', '津巴布韦', 'Zimbabwe', 390757)
-    );
-    return countryList;
+    return countriesData.map((item, idx) => new Country(
+        String(item.id),
+        item.name_ch,
+        item.name,
+        item.area
+    ));
 };
 
 export const getProvinces = (countryId: string): Array<Province> => {
@@ -415,7 +344,23 @@ export const getProvinces = (countryId: string): Array<Province> => {
         new Province('298', '9', '巴甫洛达尔州', 'Pavlodar', 124800),
         new Province('299', '9', '突厥斯坦州', 'Turkistan', 116200),
         new Province('300', '9', '乌雷套州', 'Ulytau', 122000),
-        new Province('301', '9', '西哈萨克斯坦州', 'West Kazakhstan', 151339)
+        new Province('301', '9', '西哈萨克斯坦州', 'West Kazakhstan', 151339),
+        new Province('302', '69', '下西里西亚省', 'Lower Silesian Voivodeship', 19946),
+        new Province('303', '69', '库亚维-波美拉尼亚省', 'Kuyavian-Pomeranian Voivodeship', 17971),
+        new Province('304', '69', '卢布斯卡省', 'Lubusz Voivodeship', 13988),
+        new Province('305', '69', '罗兹省', 'Łódź Voivodeship', 18219),
+        new Province('306', '69', '小波兰省', 'Lesser Poland Voivodeship', 15182),
+        new Province('307', '69', '马佐夫舍省', 'Masovian Voivodeship', 35558),
+        new Province('308', '69', '奥波莱省', 'Opole Voivodeship', 9412),
+        new Province('309', '69', '喀尔巴阡山省', 'Subcarpathian Voivodeship', 17845),
+        new Province('310', '69', '波德拉谢省', 'Podlaskie Voivodeship', 20187),
+        new Province('311', '69', '波美拉尼亚省', 'Pomeranian Voivodeship', 18310),
+        new Province('312', '69', '西里西亚省', 'Silesian Voivodeship', 12333),
+        new Province('313', '69', '圣十字省', 'Świętokrzyskie Voivodeship', 11710),
+        new Province('314', '69', '瓦尔米亚-马祖里省', 'Warmian-Masurian Voivodeship', 24173),
+        new Province('315', '69', '大波兰省', 'Greater Poland Voivodeship', 29826),
+        new Province('316', '69', '西波美拉尼亚省', 'West Pomeranian Voivodeship', 22892),
+        new Province('317', '69', '卢布林省', 'Lublin Voivodeship', 25122)
     );
 
     provincesList.sort((a, b) => b.area - a.area);
