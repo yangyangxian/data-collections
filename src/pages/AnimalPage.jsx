@@ -9,7 +9,7 @@ const columns = [
         field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
-        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1
+        renderCell: (params) => params.api.getSortedRowIds().indexOf(params.id)+1
     },
     {   field: 'id', headerName: 'ID', width: 60 },
     {   field: 'name', headerName: 'Name', width: 240 },

@@ -14,7 +14,7 @@ const columns = [
         headerName: '排名', 
         filterable: false,
         width: 50,
-        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
+        renderCell: (params) => params.api.getSortedRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, hide: true },
     {   field: 'name_ch', headerName: '国家', width: 120, },
     {   field: 'name', headerName: 'Country', width: 150, },
@@ -26,11 +26,11 @@ const columnsProvinces = [
     {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
-        renderCell: (params) => params.api.getAllRowIds().indexOf(params.id)+1 },
+        renderCell: (params) => params.api.getSortedRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, },
     {   field: 'name_ch', headerName: '省份', width: 160, },
     {   field: 'name', headerName: 'Province', width: 200, },
-    {   field: 'area', headerName: 'Area', type: 'number', width: 130, }
+    {   field: 'area', headerName: 'Area', type: 'number', width: 130 }
 ];
 
 let rows = getCountries();
@@ -58,6 +58,7 @@ export default function CountryPage() {
                             rows={rows}
                             columns={columns}
                             onRowClick={handleCountryRowClick}
+                            sortModel={[{ field: 'area', sort: 'desc' }]} 
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
