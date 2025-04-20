@@ -1,0 +1,557 @@
+{
+  "provinces": [
+    {
+      "id": "1",
+      "countryId": "4",
+      "name": "新疆维吾尔自治区",
+      "englishName": "Xinjiang",
+      "area": 1664897
+    },
+    {
+      "id": "2",
+      "countryId": "4",
+      "name": "西藏自治区",
+      "englishName": "Tibet",
+      "area": 1228424
+    },
+    {
+      "id": "3",
+      "countryId": "4",
+      "name": "内蒙古自治区",
+      "englishName": "Inner Mongolia",
+      "area": 1183000
+    },
+    {
+      "id": "4",
+      "countryId": "4",
+      "name": "青海省",
+      "englishName": "Qinghai",
+      "area": 721522
+    },
+    {
+      "id": "5",
+      "countryId": "4",
+      "name": "四川省",
+      "englishName": "Sichuan",
+      "area": 486116
+    },
+    {
+      "id": "6",
+      "countryId": "4",
+      "name": "黑龙江省",
+      "englishName": "Heilongjiang",
+      "area": 452538
+    },
+    {
+      "id": "7",
+      "countryId": "4",
+      "name": "甘肃省",
+      "englishName": "Gansu",
+      "area": 425889
+    },
+    {
+      "id": "8",
+      "countryId": "4",
+      "name": "云南省",
+      "englishName": "Yunnan",
+      "area": 383186
+    },
+    {
+      "id": "9",
+      "countryId": "4",
+      "name": "广西壮族自治区",
+      "englishName": "Guangxi",
+      "area": 237606
+    },
+    {
+      "id": "10",
+      "countryId": "4",
+      "name": "湖南省",
+      "englishName": "Hunan",
+      "area": 211836
+    },
+    {
+      "id": "11",
+      "countryId": "4",
+      "name": "陕西省",
+      "englishName": "Shaanxi",
+      "area": 205624
+    },
+    {
+      "id": "12",
+      "countryId": "4",
+      "name": "吉林省",
+      "englishName": "Jilin",
+      "area": 191202
+    },
+    {
+      "id": "13",
+      "countryId": "4",
+      "name": "河北省",
+      "englishName": "Hebei",
+      "area": 188545
+    },
+    {
+      "id": "14",
+      "countryId": "4",
+      "name": "湖北省",
+      "englishName": "Hubei",
+      "area": 185937
+    },
+    {
+      "id": "15",
+      "countryId": "4",
+      "name": "广东省",
+      "englishName": "Guangdong",
+      "area": 179656
+    },
+    {
+      "id": "16",
+      "countryId": "4",
+      "name": "贵州省",
+      "englishName": "Guizhou",
+      "area": 176099
+    },
+    {
+      "id": "17",
+      "countryId": "4",
+      "name": "江西省",
+      "englishName": "Jiangxi",
+      "area": 166936
+    },
+    {
+      "id": "18",
+      "countryId": "4",
+      "name": "河南省",
+      "englishName": "Henan",
+      "area": 165664
+    },
+    {
+      "id": "19",
+      "countryId": "4",
+      "name": "山东省",
+      "englishName": "Shandong",
+      "area": 157901
+    },
+    {
+      "id": "20",
+      "countryId": "4",
+      "name": "山西省",
+      "englishName": "Shanxi",
+      "area": 156698
+    },
+    {
+      "id": "21",
+      "countryId": "4",
+      "name": "辽宁省",
+      "englishName": "Liaoning",
+      "area": 148379
+    },
+    {
+      "id": "22",
+      "countryId": "4",
+      "name": "安徽省",
+      "englishName": "Anhui",
+      "area": 140140
+    },
+    {
+      "id": "23",
+      "countryId": "4",
+      "name": "江苏省",
+      "englishName": "Jiangsu",
+      "area": 106600
+    },
+    {
+      "id": "24",
+      "countryId": "4",
+      "name": "浙江省",
+      "englishName": "Zhejiang",
+      "area": 105506
+    },
+    {
+      "id": "25",
+      "countryId": "4",
+      "name": "福建省",
+      "englishName": "Fujian",
+      "area": 123951
+    },
+    {
+      "id": "26",
+      "countryId": "4",
+      "name": "重庆市",
+      "englishName": "Chongqing",
+      "area": 82374
+    },
+    {
+      "id": "27",
+      "countryId": "4",
+      "name": "宁夏回族自治区",
+      "englishName": "Ningxia",
+      "area": 51893
+    },
+    {
+      "id": "28",
+      "countryId": "4",
+      "name": "海南省",
+      "englishName": "Hainan",
+      "area": 35177
+    },
+    {
+      "id": "29",
+      "countryId": "4",
+      "name": "北京市",
+      "englishName": "Beijing",
+      "area": 16406
+    },
+    {
+      "id": "30",
+      "countryId": "4",
+      "name": "天津市",
+      "englishName": "Tianjin",
+      "area": 11917
+    },
+    {
+      "id": "31",
+      "countryId": "4",
+      "name": "上海市",
+      "englishName": "Shanghai",
+      "area": 8359
+    },
+    {
+      "id": "32",
+      "countryId": "3",
+      "name": "加利福尼亚",
+      "englishName": "California",
+      "area": 423970
+    },
+    {
+      "id": "33",
+      "countryId": "3",
+      "name": "阿拉巴马州",
+      "englishName": "Alabama",
+      "area": 135767
+    },
+    {
+      "id": "34",
+      "countryId": "3",
+      "name": "阿拉斯加州",
+      "englishName": "Alaska",
+      "area": 1723337
+    },
+    {
+      "id": "35",
+      "countryId": "3",
+      "name": "亚利桑那州",
+      "englishName": "Arizona",
+      "area": 295234
+    },
+    {
+      "id": "36",
+      "countryId": "3",
+      "name": "阿肯色州",
+      "englishName": "Arkansas",
+      "area": 137732
+    },
+    {
+      "id": "37",
+      "countryId": "3",
+      "name": "科罗拉多州",
+      "englishName": "Colorado",
+      "area": 269601
+    },
+    {
+      "id": "38",
+      "countryId": "3",
+      "name": "康涅狄格州",
+      "englishName": "Connecticut",
+      "area": 14357
+    },
+    {
+      "id": "39",
+      "countryId": "3",
+      "name": "特拉华州",
+      "englishName": "Delaware",
+      "area": 6446
+    },
+    {
+      "id": "40",
+      "countryId": "3",
+      "name": "佛罗里达州",
+      "englishName": "Florida",
+      "area": 170312
+    },
+    {
+      "id": "41",
+      "countryId": "3",
+      "name": "乔治亚州",
+      "englishName": "Georgia",
+      "area": 153910
+    },
+    {
+      "id": "42",
+      "countryId": "3",
+      "name": "夏威夷州",
+      "englishName": "Hawaii",
+      "area": 28313
+    },
+    {
+      "id": "43",
+      "countryId": "3",
+      "name": "爱达荷州",
+      "englishName": "Idaho",
+      "area": 216443
+    },
+    {
+      "id": "44",
+      "countryId": "3",
+      "name": "伊利诺伊州",
+      "englishName": "Illinois",
+      "area": 149995
+    },
+    {
+      "id": "45",
+      "countryId": "3",
+      "name": "印第安纳州",
+      "englishName": "Indiana",
+      "area": 94326
+    },
+    {
+      "id": "46",
+      "countryId": "3",
+      "name": "爱荷华州",
+      "englishName": "Iowa",
+      "area": 145746
+    },
+    {
+      "id": "47",
+      "countryId": "3",
+      "name": "堪萨斯州",
+      "englishName": "Kansas",
+      "area": 213100
+    },
+    {
+      "id": "48",
+      "countryId": "3",
+      "name": "肯塔基州",
+      "englishName": "Kentucky",
+      "area": 104656
+    },
+    {
+      "id": "49",
+      "countryId": "3",
+      "name": "路易斯安那州",
+      "englishName": "Louisiana",
+      "area": 135659
+    },
+    {
+      "id": "50",
+      "countryId": "3",
+      "name": "缅因州",
+      "englishName": "Maine",
+      "area": 91633
+    },
+    {
+      "id": "51",
+      "countryId": "3",
+      "name": "马里兰州",
+      "englishName": "Maryland",
+      "area": 32131
+    },
+    {
+      "id": "52",
+      "countryId": "3",
+      "name": "马萨诸塞州",
+      "englishName": "Massachusetts",
+      "area": 27336
+    },
+    {
+      "id": "53",
+      "countryId": "3",
+      "name": "密歇根州",
+      "englishName": "Michigan",
+      "area": 250487
+    },
+    {
+      "id": "54",
+      "countryId": "3",
+      "name": "明尼苏达州",
+      "englishName": "Minnesota",
+      "area": 225163
+    },
+    {
+      "id": "55",
+      "countryId": "3",
+      "name": "密西西比州",
+      "englishName": "Mississippi",
+      "area": 125438
+    },
+    {
+      "id": "56",
+      "countryId": "3",
+      "name": "密苏里州",
+      "englishName": "Missouri",
+      "area": 180540
+    },
+    {
+      "id": "65",
+      "countryId": "3",
+      "name": "北达科他州",
+      "englishName": "North Dakota",
+      "area": 183108
+    },
+    {
+      "id": "66",
+      "countryId": "3",
+      "name": "俄亥俄州",
+      "englishName": "Ohio",
+      "area": 116098
+    },
+    {
+      "id": "67",
+      "countryId": "3",
+      "name": "俄克拉荷马州",
+      "englishName": "Oklahoma",
+      "area": 181037
+    },
+    {
+      "id": "68",
+      "countryId": "3",
+      "name": "俄勒冈州",
+      "englishName": "Oregon",
+      "area": 254799
+    },
+    {
+      "id": "69",
+      "countryId": "3",
+      "name": "宾夕法尼亚州",
+      "englishName": "Pennsylvania",
+      "area": 119280
+    },
+    {
+      "id": "70",
+      "countryId": "3",
+      "name": "罗得岛州",
+      "englishName": "Rhode Island",
+      "area": 4002
+    },
+    {
+      "id": "71",
+      "countryId": "3",
+      "name": "南卡罗来纳州",
+      "englishName": "South Carolina",
+      "area": 82931
+    },
+    {
+      "id": "72",
+      "countryId": "3",
+      "name": "南达科他州",
+      "englishName": "South Dakota",
+      "area": 199729
+    },
+    {
+      "id": "73",
+      "countryId": "3",
+      "name": "田纳西州",
+      "englishName": "Tennessee",
+      "area": 109153
+    },
+    {
+      "id": "74",
+      "countryId": "3",
+      "name": "德克萨斯州",
+      "englishName": "Texas",
+      "area": 695662
+    },
+    {
+      "id": "75",
+      "countryId": "3",
+      "name": "犹他州",
+      "englishName": "Utah",
+      "area": 219882
+    },
+    {
+      "id": "76",
+      "countryId": "3",
+      "name": "佛蒙特州",
+      "englishName": "Vermont",
+      "area": 24906
+    },
+    {
+      "id": "77",
+      "countryId": "3",
+      "name": "弗吉尼亚州",
+      "englishName": "Virginia",
+      "area": 110787
+    },
+    {
+      "id": "78",
+      "countryId": "3",
+      "name": "华盛顿州",
+      "englishName": "Washington",
+      "area": 184661
+    },
+    {
+      "id": "79",
+      "countryId": "3",
+      "name": "西弗吉尼亚州",
+      "englishName": "West Virginia",
+      "area": 62755
+    },
+    {
+      "id": "80",
+      "countryId": "3",
+      "name": "威斯康星州",
+      "englishName": "Wisconsin",
+      "area": 169639
+    },
+    {
+      "id": "81",
+      "countryId": "3",
+      "name": "怀俄明州",
+      "englishName": "Wyoming",
+      "area": 253335
+    },
+    {
+      "id": "82",
+      "countryId": "1",
+      "name": "阿尔泰共和国",
+      "englishName": "Altai Republic",
+      "area": 92600
+    },
+    {
+      "id": "83",
+      "countryId": "1",
+      "name": "阿尔泰边疆区",
+      "englishName": "Altai Krai",
+      "area": 168000
+    },
+    {
+      "id": "84",
+      "countryId": "1",
+      "name": "阿穆尔州",
+      "englishName": "Amur Oblast",
+      "area": 361900
+    },
+    {
+      "id": "85",
+      "countryId": "1",
+      "name": "阿斯特拉罕州",
+      "englishName": "Astrakhan Oblast",
+      "area": 44100
+    },
+    {
+      "id": "86",
+      "countryId": "1",
+      "name": "巴什科尔托斯坦共和国",
+      "englishName": "Bashkortostan",
+      "area": 143600
+    },
+    {
+      "id": "87",
+      "countryId": "1",
+      "name": "别尔哥罗德州",
+      "englishName": "Belgorod Oblast",
+      "area": 27100
+    }
+  ]
+}

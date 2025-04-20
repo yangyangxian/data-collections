@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import PhotoWall from './PhotoWall.jsx';
 import CountryPage from './CountryPage.jsx';
 import AnimalPage from './AnimalPage.jsx';
+import CarPage from './CarPage.jsx';
 
 console.debug("this is from top level of TabPanel.jsx");
 
@@ -54,6 +55,7 @@ export default function BasicTabs() {
                         <Tab label="Animals" {...a11yProps(0)} />
                         <Tab label="Countries" {...a11yProps(1)} />
                         <Tab label="Photo Wall" {...a11yProps(2)} />
+                        <Tab label="Cars" {...a11yProps(3)} />
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
@@ -64,6 +66,9 @@ export default function BasicTabs() {
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     <PhotoWall></PhotoWall>
+                </CustomTabPanel>
+                <CustomTabPanel value={value} index={3}>
+                    <CarPage></CarPage>
                 </CustomTabPanel>
             </Box>
     );
