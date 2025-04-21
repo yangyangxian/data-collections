@@ -1,24 +1,27 @@
 import carsData from '../../public/data/cars.json';
 
 class Car {
-    id: string;
-    name: string;
-    image: string;
-    brand: string;
-    displayName: string;
+    Id: string;
+    Name: string;
+    Image: string;
+    Brand: string;
+    DisplayName: string;
+    TopSpeed: number;
 
     constructor(
         id: string,
         name: string,
         image: string,
         brand: string,
-        displayName: string
+        displayName: string,
+        topSpeed: number
     ) {
-        this.id = id;
-        this.name = name;
-        this.image = image;
-        this.brand = brand;
-        this.displayName = displayName;
+        this.Id = id;
+        this.Name = name;
+        this.Image = image;
+        this.Brand = brand;
+        this.DisplayName = displayName;
+        this.TopSpeed = topSpeed;
     }
 }
 
@@ -30,7 +33,8 @@ export const getCars = (): Array<Car> => {
                 car.name,
                 car.image,
                 car.brand,
-                car.displayName
+                car.displayName,
+                car.topSpeed
             )
     );
 }

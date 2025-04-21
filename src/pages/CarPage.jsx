@@ -17,7 +17,7 @@ export default function CarPage() {
 
     const handleListItemClick = ( event, index) => {
         setSelectedIndex(index);
-        const car = cars.find(car => car.id === index);
+        const car = cars.find(car => car.Id === index);
         setSelectedCar(car);
     }
 
@@ -28,8 +28,8 @@ export default function CarPage() {
                     <Item style={{minHeight:400}}>
                         <List component="nav" aria-label="secondary mailbox folder">
                             {cars.map((car) => (
-                            <ListItemButton selected={selectedIndex === car.id} onClick={(event) => handleListItemClick(event, car.id)}>
-                                <ListItemText primary={car.displayName} />
+                            <ListItemButton selected={selectedIndex === car.Id} onClick={(event) => handleListItemClick(event, car.Id)}>
+                                <ListItemText primary={car.DisplayName} />
                             </ListItemButton>
                             ))}
                         </List>
@@ -38,13 +38,14 @@ export default function CarPage() {
                 <Grid container size={10}>
                     <Grid size={8}>
                         <ImageItem>
-                            <img width='100%' style={{borderRadius: 3, display:'block'}} src={selectedCar ? selectedCar.image : '' } alt='car photo' />
+                            <img width='100%' style={{borderRadius: 3, display:'block'}} src={selectedCar ? selectedCar.Image : '' } alt='car photo' />
                         </ImageItem>
                     </Grid>
                     <Grid>
-                        <Stack spacing={1} paddingLeft={2}>
-                            <Item><p>车名：{selectedCar.displayName}</p></Item>
-                            <Item><p>品牌：{selectedCar.brand}</p></Item>
+                        <Stack spacing={0.5} paddingLeft={2}>
+                            <Item><p>车名：{selectedCar.DisplayName}</p></Item>
+                            <Item><p>品牌：{selectedCar.Brand}</p></Item>
+                            <Item><p>极速：{selectedCar.TopSpeed}</p></Item>
                         </Stack>
                     </Grid>
                 </Grid>
