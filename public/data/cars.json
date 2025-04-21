@@ -138,16 +138,5 @@
     "doors": "2-door coupe",
     "chassis": null,
     "brakes": null
-  },
-  {
-    "id": "su7-ultra",
-    "image": "/images/cars/su7-ultra.jpeg",
-    "brand": "IM Motors",
-    "name": "su7-ultra",
-    "displayName": "智己 SU7 Ultra",
-    "topSpeed": 265,
-    "zeroTo100": 2.89,
-    "price": 349900,
-    "horsepower": 578
   }
 ]
