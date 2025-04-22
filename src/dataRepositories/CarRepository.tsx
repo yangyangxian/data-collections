@@ -7,6 +7,13 @@ class Car {
     Brand: string;
     DisplayName: string;
     TopSpeed: number;
+    Length: number;
+    Width: number;
+    Height: number;
+    Weight: number;
+    Horsepower: number;
+    ZeroTo100: number;
+    Torque: number;
 
     constructor(
         id: string,
@@ -14,7 +21,14 @@ class Car {
         image: string,
         brand: string,
         displayName: string,
-        topSpeed: number
+        topSpeed: number,
+        length: number,
+        width: number,
+        height: number,
+        weight: number,
+        horsepower: number,
+        zeroTo100: number,
+        torque: number
     ) {
         this.Id = id;
         this.Name = name;
@@ -22,6 +36,13 @@ class Car {
         this.Brand = brand;
         this.DisplayName = displayName;
         this.TopSpeed = topSpeed;
+        this.Length = length;
+        this.Width = width;
+        this.Height = height;
+        this.Weight = weight;
+        this.Horsepower = horsepower;
+        this.ZeroTo100 = zeroTo100;
+        this.Torque = torque;
     }
 }
 
@@ -34,7 +55,14 @@ export const getCars = (): Array<Car> => {
                 car.image,
                 car.brand,
                 car.displayName,
-                car.topSpeed
+                car.topSpeed,
+                car.length,
+                car.width,
+                car.height,
+                car.weight,
+                car.horsepower,
+                car.zeroTo100,
+                car.torque
             )
     );
 }
