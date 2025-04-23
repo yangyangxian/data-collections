@@ -7,11 +7,10 @@ export const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
-    elevation: 24,
+    borderRadius: '9px',
     color: (theme.vars ?? theme).palette.text.secondary,
     ...theme.applyStyles('dark', {
-        backgroundColor: '#1A2027',
-        elevation: 24
+        backgroundColor: '#1A2027'
     }),
 }));
 
