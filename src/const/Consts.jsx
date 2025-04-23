@@ -3,7 +3,7 @@
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-export const Item = styled(Paper)(({ theme }) => ({
+const StyleItem = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
@@ -14,9 +14,26 @@ export const Item = styled(Paper)(({ theme }) => ({
     }),
 }));
 
-export const ImageItem = styled(Paper)(({ theme }) => ({
+export function Item(props) {
+    return (
+        <StyleItem elevation={8} {...props} >
+            {props.children}
+        </StyleItem>
+    );
+}
+
+export function ImageItem(props) {
+    return (
+        <ImageStyleItem elevation={16} {...props}>
+            {props.children}
+        </ImageStyleItem>
+    );
+}
+
+const ImageStyleItem = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     textAlign: 'center',
+    borderRadius: '9px',
     color: (theme.vars ?? theme).palette.text.secondary,
     ...theme.applyStyles('dark', {
         backgroundColor: '#1A2027',
