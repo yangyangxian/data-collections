@@ -13,10 +13,10 @@ const columns = [
     {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
-        width: 50,
+        width: 55,
         renderCell: (params) => params.api.getSortedRowIds().indexOf(params.id)+1 },
-    {   field: 'id', headerName: 'ID', width: 60, hide: true },
-    {   field: 'name_ch', headerName: '国家', width: 120, },
+    {   field: 'id', headerName: 'ID', width: 60, },
+    {   field: 'name_ch', headerName: '国家', width: 130, },
     {   field: 'name', headerName: 'Country', width: 150, },
     {   field: 'area', headerName: 'Area', type: 'number', width: 130,},
     {   field: 'population', headerName: 'Population', type: 'number', width: 130,}
@@ -26,9 +26,10 @@ const columnsProvinces = [
     {   field: 'rowNum' , 
         headerName: '排名', 
         filterable: false,
+        width: 55,
         renderCell: (params) => params.api.getSortedRowIds().indexOf(params.id)+1 },
     {   field: 'id', headerName: 'ID', width: 60, },
-    {   field: 'name_ch', headerName: '省份', width: 160, },
+    {   field: 'name_ch', headerName: '省份', width: 185, },
     {   field: 'name', headerName: 'Province', width: 200, },
     {   field: 'area', headerName: 'Area', type: 'number', width: 130 }
 ];

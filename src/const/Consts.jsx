@@ -12,6 +12,10 @@ const StyleItem = styled(Paper)(({ theme }) => ({
     ...theme.applyStyles('dark', {
         backgroundColor: '#1A2027'
     }),
+    transition: theme.transitions.create('box-shadow'),
+    '&:hover': {
+        boxShadow: theme.shadows[18],
+    },
 }));
 
 export function Item(props) {
@@ -24,7 +28,7 @@ export function Item(props) {
 
 export function ImageItem(props) {
     return (
-        <ImageStyleItem elevation={16} {...props}>
+        <ImageStyleItem elevation={14} {...props}>
             {props.children}
         </ImageStyleItem>
     );
@@ -38,4 +42,8 @@ const ImageStyleItem = styled(Paper)(({ theme }) => ({
     ...theme.applyStyles('dark', {
         backgroundColor: '#1A2027',
     }),
+    transition: theme.transitions.create('box-shadow'),
+    '&:hover': {
+        boxShadow: theme.shadows[24],
+    },
 }));
