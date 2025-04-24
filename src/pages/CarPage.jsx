@@ -19,8 +19,8 @@ const cars = getCars().sort((a, b) => {
     return 0;
 });
 
-const carItemListStyle = { backgroundColor: 'rgba(141, 76, 152, 0.91)', color: 'white', minHeight:400};
-const descriptionItemStyle = { backgroundColor: 'rgba(141, 76, 152, 0.91)', color: 'white', minWidth: 200 };
+const carItemListStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: 'white', minHeight:400};
+const descriptionItemStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: 'white', minWidth: 200 };
 
 export default function CarPage() {
     const [selectedIndex, setSelectedIndex] = React.useState('1');
