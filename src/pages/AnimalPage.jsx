@@ -40,7 +40,7 @@ const rows = getAnimals();
 export default function AnimalPage() {
     return (
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            <Grid size='auto'>
+            <Grid size={16}>
                 <Item>
                     <DataTable
                         rows={rows}

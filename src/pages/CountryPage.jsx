@@ -51,7 +51,7 @@ export default function CountryPage() {
     return (
         <Box>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                <Grid size={6}>
+                <Grid size={{xs:12, sm: 12, md: 6}}>
                     <Item>
                         <DataTable
                             rowHeight={40}
@@ -64,7 +64,7 @@ export default function CountryPage() {
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
                 </Grid>
-                <Grid size={6}>
+                <Grid size={{xs:12, sm: 12, md: 6}}>
                     <Item>
                         <DataTable
                             rowHeight={40}

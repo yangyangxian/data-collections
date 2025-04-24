@@ -19,6 +19,9 @@ const cars = getCars().sort((a, b) => {
     return 0;
 });
 
+const carItemListStyle = { backgroundColor: 'rgba(66, 41, 26, 0.41)', color: 'white', minHeight:400};
+const descriptionItemStyle = { backgroundColor: 'rgba(66, 41, 26, 0.41)', color: 'white', minWidth: 200 };
+
 export default function CarPage() {
     const [selectedIndex, setSelectedIndex] = React.useState('1');
     const [selectedCar, setSelectedCar] = React.useState(cars[0]);
@@ -32,8 +35,8 @@ export default function CarPage() {
     return (
         <Box>
             <Grid container rowSpacing={1} columns={24}>
-                <Grid size={5} paddingRight={3}>
-                    <Item style={{minHeight:400}}>
+                <Grid size={4.5} paddingRight={1}>
+                    <Item style={carItemListStyle}>
                         <List component="nav" aria-label="secondary mailbox folder">
                             {cars.map((car) => (
                             <ListItemButton selected={selectedIndex === car.Id} onClick={(event) => handleListItemClick(event, car.Id)}>
@@ -44,21 +47,21 @@ export default function CarPage() {
                     </Item>
                 </Grid>
                 <Grid container size={19}>
-                    <Grid size={18}>
-                        <ImageItem>
-                            <img width='100%' style={{borderRadius: 3, display:'block'}} src={selectedCar ? selectedCar.Image : '' } alt='car photo' />
-                        </ImageItem>
-                    </Grid>
-                    <Grid>
+                    <Grid size={18}>  
                         <Stack spacing={0.5} paddingLeft={2}>
-                            <Item elevation={4}><p>车名：{selectedCar.DisplayName}</p></Item>
-                            <Item elevation={4}><p>品牌：{selectedCar.Brand}</p></Item>
-                            <Item elevation={4}><p>极速：{selectedCar.TopSpeed}km/h</p></Item>
-                            <Item elevation={4}><p>0-100km/h用时：{selectedCar.ZeroTo100}s</p></Item>
-                            <Item elevation={4}><p>长宽高：{selectedCar.Length}*{selectedCar.Width}*{selectedCar.Height}mm</p></Item>
-                            <Item elevation={4}><p>重量：{selectedCar.Weight} kg</p></Item>
-                            <Item elevation={4}><p>扭矩：{selectedCar.Torque}N*m</p></Item>
-                            <Item elevation={4}><p>马力：{selectedCar.Horsepower}p</p></Item>
+                            <ImageItem>
+                                <img width='100%' style={{borderRadius: 8, display:'block'}} src={selectedCar ? selectedCar.Image : '' } alt='car photo' />
+                            </ImageItem>
+                        </Stack>    
+                    </Grid>
+                    <Grid paddingLeft={0.5}>
+                        <Stack spacing={0.5} paddingLeft={2}>
+                            <Item style={descriptionItemStyle}><p>极速：{selectedCar.TopSpeed}km/h</p></Item>
+                            <Item style={descriptionItemStyle}><p>0-100km/h加速：{selectedCar.ZeroTo100}s</p></Item>
+                            <Item style={descriptionItemStyle}><p>长宽高：{selectedCar.Length}*{selectedCar.Width}*{selectedCar.Height}mm</p></Item>
+                            <Item style={descriptionItemStyle}><p>重量：{selectedCar.Weight}kg</p></Item>
+                            <Item style={descriptionItemStyle}><p>扭矩：{selectedCar.Torque}Nm</p></Item>
+                            <Item style={descriptionItemStyle}><p>马力：{selectedCar.Horsepower}p</p></Item>
                         </Stack>
                     </Grid>
                 </Grid>

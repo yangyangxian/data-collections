@@ -50,8 +50,15 @@ export default function BasicTabs() {
 
     return (
             <Box>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs  value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', overflowX: 'auto', whiteSpace: 'nowrap' }}>
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="basic tabs example"
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        allowScrollButtonsMobile
+                    >
                         <Tab label="Animals" {...a11yProps(0)} />
                         <Tab label="Countries" {...a11yProps(1)} />
                         <Tab label="Photo Wall" {...a11yProps(2)} />
