@@ -56,6 +56,8 @@ export default function BasicTabs() {
                         onChange={handleChange}
                         aria-label="basic tabs example"
                         variant="scrollable"
+                        indicatorColor="secondary"
+                        textColor="inherit"
                         scrollButtons="auto"
                         allowScrollButtonsMobile
                     >

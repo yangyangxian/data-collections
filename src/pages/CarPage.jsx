@@ -19,8 +19,8 @@ const cars = getCars().sort((a, b) => {
     return 0;
 });
 
-const carItemListStyle = { backgroundColor: 'rgba(66, 41, 26, 0.41)', color: 'white', minHeight:400};
-const descriptionItemStyle = { backgroundColor: 'rgba(66, 41, 26, 0.41)', color: 'white', minWidth: 200 };
+const carItemListStyle = { backgroundColor: 'rgba(141, 76, 152, 0.91)', color: 'white', minHeight:400};
+const descriptionItemStyle = { backgroundColor: 'rgba(141, 76, 152, 0.91)', color: 'white', minWidth: 200 };
 
 export default function CarPage() {
     const [selectedIndex, setSelectedIndex] = React.useState('1');
@@ -37,7 +37,7 @@ export default function CarPage() {
             <Grid container rowSpacing={1} columns={24}>
                 <Grid size={4.5} paddingRight={1}>
                     <Item style={carItemListStyle}>
-                        <List component="nav" aria-label="secondary mailbox folder">
+                        <List sx={{ maxHeight: 600, overflowY: 'auto' }} component="nav" aria-label="secondary mailbox folder">
                             {cars.map((car) => (
                             <ListItemButton selected={selectedIndex === car.Id} onClick={(event) => handleListItemClick(event, car.Id)}>
                                 <ListItemText primary={car.DisplayName} />
