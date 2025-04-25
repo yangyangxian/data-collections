@@ -23,8 +23,16 @@ const carItemListStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: '
 const descriptionItemStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: 'white', minWidth: 200 };
 
 export default function CarPage() {
+    const listRef = React.useRef(null);
+    const secondItemRef = React.useRef(null);
     const [selectedIndex, setSelectedIndex] = React.useState('1');
     const [selectedCar, setSelectedCar] = React.useState(cars[0]);
+
+    React.useEffect(() => {
+        if (secondItemRef.current && listRef.current) {
+            secondItemRef.current.scrollIntoView({ block: 'start', behavior: 'auto' });
+        }
+    }, []);
 
     const handleListItemClick = ( event, index) => {
         setSelectedIndex(index);
@@ -37,11 +45,16 @@ export default function CarPage() {
             <Grid container rowSpacing={1} columns={24}>
                 <Grid size={4.5} paddingRight={1}>
                     <Item style={carItemListStyle}>
-                        <List sx={{ maxHeight: 600, overflowY: 'auto' }} component="nav" aria-label="secondary mailbox folder">
-                            {cars.map((car) => (
-                            <ListItemButton selected={selectedIndex === car.Id} onClick={(event) => handleListItemClick(event, car.Id)}>
-                                <ListItemText primary={car.DisplayName} />
-                            </ListItemButton>
+                        <List ref={listRef} sx={{ maxHeight: 600, overflowY: 'auto' }} component="nav" aria-label="secondary mailbox folder">
+                            {cars.map((car, idx) => (
+                                <ListItemButton
+                                    key={car.Id}
+                                    ref={car.Name === 'flyingspurw12' ? secondItemRef : null}
+                                    selected={selectedIndex === car.Id}
+                                    onClick={(event) => handleListItemClick(event, car.Id)}
+                                >
+                                    <ListItemText primary={car.DisplayName} />
+                                </ListItemButton>
                             ))}
                         </List>
                     </Item>
