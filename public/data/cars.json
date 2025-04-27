@@ -477,5 +477,30 @@
     "battery": null,
     "electricRange": null,
     "wiki": "https://en.wikipedia.org/wiki/Mazda_MX-5"
+  },
+  {
+    "id": "21",
+    "image": "/images/cars/camaro.png",
+    "brand": "Chevrolet",
+    "name": "camaro",
+    "displayName": "Chevrolet Camaro",
+    "topSpeed": 266,
+    "zeroTo100": 4.0,
+    "price": null,
+    "horsepower": 455,
+    "torque": 617,
+    "engine": "6.2L LT1 V8",
+    "fuelType": "Petrol",
+    "weight": 1671,
+    "length": 4783,
+    "width": 1897,
+    "height": 1349,
+    "wheelbase": 2812,
+    "drivetrain": "RWD",
+    "transmission": "6-speed manual / 8-speed or 10-speed automatic",
+    "doors": "2-door coupe/convertible",
+    "chassis": null,
+    "brakes": "Brembo (front 6-piston, rear 4-piston)",
+    "wiki": "https://en.wikipedia.org/wiki/Chevrolet_Camaro_(sixth_generation)"
   }
 ]
