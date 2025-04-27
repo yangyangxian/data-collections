@@ -59,7 +59,16 @@ export default function CountryPage() {
                             rows={rows}
                             columns={columns}
                             onRowClick={handleCountryRowClick}
-                            sortModel={[{ field: 'area', sort: 'desc' }]} 
+                            //sortModel={[{ field: 'area', sort: 'desc' }]} 
+                            initialState={{
+                                sorting: {
+                                    sortModel: [
+                                        { field: 'area', sort: 'desc' },
+                                        { field: 'population', sort: 'asc' },
+                                        { field: 'name', sort: 'asc' }
+                                    ]
+                                }
+                            }}
                         />
                     </Item>
                     <Item><a href='https://zh.wikipedia.org/wiki/世界各国和地区面积列表'>Source</a></Item>
