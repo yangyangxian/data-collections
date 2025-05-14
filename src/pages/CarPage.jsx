@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -41,11 +40,10 @@ export default function CarPage() {
     }
 
     return (
-        <Box sx={{ marginTop: 3 }}>
             <Grid container rowSpacing={1} columns={24}>
                 <Grid size={4.5} paddingRight={1}>
                     <Item style={carItemListStyle}>
-                        <List ref={listRef} sx={{ maxHeight: 600, overflowY: 'auto' }} component="nav" aria-label="secondary mailbox folder">
+                        <List ref={listRef} sx={{ maxHeight: 580, overflowY: 'auto' }} component="nav" aria-label="secondary mailbox folder">
                             {cars.map((car, idx) => (
                                 <ListItemButton
                                     key={car.Id}
@@ -79,6 +77,5 @@ export default function CarPage() {
                     </Grid>
                 </Grid>
             </Grid>         
-        </Box>
     );
 }

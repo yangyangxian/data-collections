@@ -17,7 +17,6 @@ export default function BasicTabs() {
     const location = useLocation();
     const [selectedTab, setSelectedTab] = React.useState(0);
 
-    // Map routes to tab indices
     const routeToTabIndex = {
         '/animals': 0,
         '/countries': 1,
@@ -69,13 +68,15 @@ export default function BasicTabs() {
                     <Tab label="Cars" />
                 </Tabs>
             </Box>
-            <Routes>
-                <Route path="/animals" element={<AnimalPage />} />
-                <Route path="/countries" element={<CountryPage />} />
-                <Route path="/photo-wall" element={<PhotoWall />} />
-                <Route path="/cars" element={<CarPage />} />
-                <Route path="*" element={<AnimalPage />} /> {/* Default route */}
-            </Routes>
+            <div style={{ padding: '16px 8px 16px 8px' }}>
+                <Routes>
+                    <Route path="/animals" element={<AnimalPage />} />
+                    <Route path="/countries" element={<CountryPage />} />
+                    <Route path="/photo-wall" element={<PhotoWall />} />
+                    <Route path="/cars" element={<CarPage />} />
+                    <Route path="*" element={<AnimalPage /> } /> {/* Default route */}
+                </Routes>
+            </div>
         </Box>
     );
 }

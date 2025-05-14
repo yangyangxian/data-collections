@@ -15,7 +15,7 @@ const itemData = [
 
 export default function PhotoWall() {
     return (
-        <Box>
+        <div>
             <ImageList sx={{ width: 1280 }}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.img}>
@@ -34,6 +34,6 @@ export default function PhotoWall() {
                     </ImageListItem>
                 ))}
             </ImageList>
-        </Box>
+        </div>
     );
 }
