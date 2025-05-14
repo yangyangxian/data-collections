@@ -41,7 +41,7 @@ export default function CarPage() {
     }
 
     return (
-        <Box>
+        <Box sx={{ marginTop: 3 }}>
             <Grid container rowSpacing={1} columns={24}>
                 <Grid size={4.5} paddingRight={1}>
                     <Item style={carItemListStyle}>

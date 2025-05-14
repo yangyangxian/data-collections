@@ -49,7 +49,7 @@ export default function CountryPage() {
     };
 
     return (
-        <Box>
+        <Box sx={{ marginTop: 3 }}>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid size={{xs:12, sm: 12, md: 6}}>
                     <Item>
