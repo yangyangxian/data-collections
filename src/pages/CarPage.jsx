@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 
 import { ImageItem, Item } from '../const/Consts';
 import { getCars } from '../dataRepositories/CarRepository.tsx';
+import { primary } from '../const/colors.tsx';
 
 const cars = getCars().sort((a, b) => {
     if (a.DisplayName < b.DisplayName) {
@@ -18,8 +19,8 @@ const cars = getCars().sort((a, b) => {
     return 0;
 });
 
-const carItemListStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: 'white', minHeight:400};
-const descriptionItemStyle = { backgroundColor: 'rgba(124, 68, 183, 0.81)', color: 'white', minWidth: 200 };
+const carItemListStyle = { backgroundColor: `${primary}`, color: 'white', minHeight:400};
+const descriptionItemStyle = { backgroundColor: `${primary}`, color: 'white', minWidth: 200 };
 
 export default function CarPage() {
     const listRef = React.useRef(null);
