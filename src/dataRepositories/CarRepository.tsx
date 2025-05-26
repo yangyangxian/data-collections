@@ -1,4 +1,4 @@
-import carsData from '../../public/data/cars.json';
+import carsData from '../../server/data/cars.json';
 
 class Car {
     Id: string;

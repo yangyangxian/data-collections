@@ -1,4 +1,4 @@
-import countriesData from '../../public/data/countries.json';
+import countriesData from '../../server/data/countries.json';
 
 class Country {
     constructor(id:string, name_ch:string, name:string, area:number, population?:number) {
