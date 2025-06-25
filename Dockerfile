@@ -1,5 +1,5 @@
-# Use an official Node.js runtime as the base image
-FROM node:18
+# Use multi-stage build to reduce image size
+FROM node:22 AS builder
 
 # Set the working directory in the container
 WORKDIR /app
@@ -15,6 +15,20 @@ COPY . .
 
 # Build the frontend
 RUN npm run build
+
+# Production image, only copy necessary files
+FROM node:22-alpine AS prod
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy over package.json and package-lock.json
+COPY --from=builder /app/package*.json ./
+
+# Copy over node_modules, dist, and server folder from the builder stage
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/server ./server
 
 # Install a lightweight static file server
 RUN npm install -g serve
