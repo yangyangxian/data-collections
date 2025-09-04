@@ -13,9 +13,6 @@ const StyleItem = styled(Paper)(({ theme }) => ({
         backgroundColor: '#1A2027'
     }),
     transition: theme.transitions.create('box-shadow'),
-    '&:hover': {
-        boxShadow: theme.shadows[18],
-    },
 }));
 
 export function Item(props) {
@@ -43,7 +40,4 @@ const ImageStyleItem = styled(Paper)(({ theme }) => ({
         backgroundColor: '#1A2027',
     }),
     transition: theme.transitions.create('box-shadow'),
-    '&:hover': {
-        boxShadow: theme.shadows[24],
-    },
 }));
