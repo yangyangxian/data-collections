@@ -15,17 +15,17 @@
   },
   {
     "id": 3,
-    "name_ch": "中国",
-    "name": "China",
-    "area": 9600000,
-    "population": 1416096094
-  },
-  {
-    "id": 4,
     "name_ch": "美国",
     "name": "United States",
     "area": 9631420,
     "population": 347275807
+  },
+  {
+    "id": 4,
+    "name_ch": "中国",
+    "name": "China",
+    "area": 9600000,
+    "population": 1416096094
   },
   {
     "id": 5,
