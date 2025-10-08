@@ -8,6 +8,7 @@ import PhotoWall from './PhotoWall.jsx';
 import CountryPage from './CountryPage.jsx';
 import AnimalPage from './AnimalPage.jsx';
 import CarPage from './CarPage.jsx';
+import MountainPage from './MountainPage.jsx';
 
 console.debug("this is from top level of TabPanel.jsx");
 
@@ -22,6 +23,7 @@ export default function BasicTabs() {
         '/countries': 1,
         '/photo-wall': 2,
         '/cars': 3,
+        '/mountains': 4,
     };
 
     // Update selectedTab based on the current route
@@ -45,6 +47,9 @@ export default function BasicTabs() {
             case 3:
                 navigate('/cars');
                 break;
+            case 4:
+                navigate('/mountains');
+                break;
             default:
                 break;
         }
@@ -66,6 +71,7 @@ export default function BasicTabs() {
                     <Tab label="Countries" />
                     <Tab label="Photo Wall" />
                     <Tab label="Cars" />
+                    <Tab label="Mountains" />
                 </Tabs>
             </Box>
             <div style={{ padding: '16px 8px 16px 8px' }}>
@@ -74,6 +80,7 @@ export default function BasicTabs() {
                     <Route path="/countries" element={<CountryPage />} />
                     <Route path="/photo-wall" element={<PhotoWall />} />
                     <Route path="/cars" element={<CarPage />} />
+                    <Route path="/mountains" element={<MountainPage />} />
                     <Route path="*" element={<AnimalPage /> } /> {/* Default route */}
                 </Routes>
             </div>
