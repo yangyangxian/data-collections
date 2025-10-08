@@ -19,7 +19,14 @@ const columns = [
         field: 'picture', headerName: '照片', width: 220, renderCell: (params) => {
             return (
                 <div>
-                    <img src={params.value} alt='' object-fit= 'contain' width='90%' height='100%' />
+                    <img 
+                        src={params.value} 
+                        alt='' 
+                        object-fit='contain' 
+                        width='90%' 
+                        height='100%'
+                        onError={(e)=>{ e.currentTarget.onerror=null; e.currentTarget.src='/images/animals/brownbear.jpeg'; }}
+                    />
                 </div>
             )
         }

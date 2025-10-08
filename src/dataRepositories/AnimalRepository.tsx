@@ -64,6 +64,7 @@ export const getAnimals = (): Array<Animal> => {
     add('Common warthog疣猪', 'Phacochoerus疣猪属', 'Suidae猪科', 'Phacochoerus africanus', 55, '/images/animals/commonwarthog.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Red fox红狐狸', 'Vulpes狐狸属', 'Canidae犬科', 'Vulpes vulpes', 50, '/images/animals/redfox.png', 'https://en.wikipedia.org/wiki/Red_fox');
     add('Human人类', 'Homo人属', 'Hominidae人科', 'Homo sapiens', 44, '/images/animals/human.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
+    add('Polar bear北极熊', 'Ursus熊属', 'Ursidae熊科', 'Ursus maritimus', 40, '/images/animals/polarbear.png', 'https://zh.wikipedia.org/wiki/北極熊');
     add('Common wombat塔斯马尼亚袋熊', 'Vombatus袋熊属', 'Vombatidae袋熊科', 'Vombatus ursinus', 40, '/images/animals/commonwombat.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Hippopotamus河马', 'Hippopotamus河马属', 'Hippopotamidae河马科', 'Hippopotamus amphibius', 30, '/images/animals/hippopotamus.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Asian elephant亚洲象', 'Elephas象属', 'Elephantidae象科', 'Elephas maximus', 25, '/images/animals/asianelepant.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');           
