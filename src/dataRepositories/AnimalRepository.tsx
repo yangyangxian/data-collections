@@ -72,6 +72,7 @@ export const getAnimals = (): Array<Animal> => {
     add('Asian elephant亚洲象', 'Elephas象属', 'Elephantidae象科', 'Elephas maximus', 25, '/images/animals/asianelepant.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');          
     add('King cobra眼镜王蛇', 'Ophiophagus眼镜王蛇属', 'Elapidae眼镜蛇科', 'Ophiophagus hannah', 20, '/images/animals/kingcobra.png', 'https://zh.wikipedia.org/wiki/%E7%9C%BC%E9%8F%A1%E7%8E%8B%E8%9B%87');
     add('Chinese water dragon长鬣蜥', 'Physignathus长鬣蜥属', 'Agamidae旧大陆鬣蜥科', 'Physignathus cocincinus', 15, '/images/animals/chinesewaterdragon.png', 'https://zh.wikipedia.org/wiki/%E9%95%BF%E9%AC%A3%E8%9C%A5');
+    add('Emperor penguin帝企鹅', 'Aptenodytes帝企鹅属', 'Spheniscidae企鹅科', 'Aptenodytes forsteri', 9, '/images/animals/emperorpenguin.png', 'https://zh.wikipedia.org/wiki/%E5%B8%9D%E9%B9%85');
 
     return animalList;
 };
