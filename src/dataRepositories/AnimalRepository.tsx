@@ -63,13 +63,15 @@ export const getAnimals = (): Array<Animal> => {
     add('Black rhinoceros黑犀', 'Diceros黑犀属', 'Rhinocerotidae犀科', 'Diceros bicornis', 55, '/images/animals/blackrhinoceros.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Common warthog疣猪', 'Phacochoerus疣猪属', 'Suidae猪科', 'Phacochoerus africanus', 55, '/images/animals/commonwarthog.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Red fox红狐狸', 'Vulpes狐狸属', 'Canidae犬科', 'Vulpes vulpes', 50, '/images/animals/redfox.png', 'https://en.wikipedia.org/wiki/Red_fox');
-    // Domestic goat sprint speed varies; healthy adults can reach ~48 km/h over short distances.
     add('Domestic goat家山羊', 'Capra山羊属', 'Bovidae牛科', 'Capra hircus', 48, '/images/animals/goat.png', 'https://en.wikipedia.org/wiki/Goat');
     add('Human人类', 'Homo人属', 'Hominidae人科', 'Homo sapiens', 44, '/images/animals/human.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Polar bear北极熊', 'Ursus熊属', 'Ursidae熊科', 'Ursus maritimus', 40, '/images/animals/polarbear.png', 'https://zh.wikipedia.org/wiki/北極熊');
+    add('Sheep绵羊', 'Ovis绵羊属', 'Bovidae牛科', 'Ovis aries', 40, '/images/animals/sheep.png', 'https://en.wikipedia.org/wiki/Sheep');
     add('Common wombat塔斯马尼亚袋熊', 'Vombatus袋熊属', 'Vombatidae袋熊科', 'Vombatus ursinus', 40, '/images/animals/commonwombat.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Hippopotamus河马', 'Hippopotamus河马属', 'Hippopotamidae河马科', 'Hippopotamus amphibius', 30, '/images/animals/hippopotamus.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
-    add('Asian elephant亚洲象', 'Elephas象属', 'Elephantidae象科', 'Elephas maximus', 25, '/images/animals/asianelepant.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');           
+    add('Asian elephant亚洲象', 'Elephas象属', 'Elephantidae象科', 'Elephas maximus', 25, '/images/animals/asianelepant.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');          
+    add('King cobra眼镜王蛇', 'Ophiophagus眼镜王蛇属', 'Elapidae眼镜蛇科', 'Ophiophagus hannah', 20, '/images/animals/kingcobra.png', 'https://zh.wikipedia.org/wiki/%E7%9C%BC%E9%8F%A1%E7%8E%8B%E8%9B%87');
+    add('Chinese water dragon长鬣蜥', 'Physignathus长鬣蜥属', 'Agamidae旧大陆鬣蜥科', 'Physignathus cocincinus', 15, '/images/animals/chinesewaterdragon.png', 'https://zh.wikipedia.org/wiki/%E9%95%BF%E9%AC%A3%E8%9C%A5');
 
     return animalList;
 };
