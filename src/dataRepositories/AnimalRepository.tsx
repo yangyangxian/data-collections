@@ -39,6 +39,7 @@ export const getAnimals = (): Array<Animal> => {
     add('Tsessebe转角牛羚', 'Damaliscus转角牛羚属', 'Bovidae牛科', 'Damaliscus lunatus', 90, '/images/animals/tsessebe.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add("Thomson's gazelle汤氏瞪羚", 'Eudorcas美羚属', 'Bovidae牛科', 'Eudorcas thomsonii', 90, '/images/animals/thomsonsgazelle.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Horse马', 'Equus马属', 'Equidae马科', 'Equus ferus caballus', 89, '/images/animals/horse.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
+    add('Mallard绿头鸭', 'Anas绿头鸭属', 'Anatidae鸭科', 'Anas platyrhynchos', 89, '/images/animals/mallard.png', 'https://www.allaboutbirds.org/guide/Mallard/overview');
     add('Springbok跳羚', 'Antidorcas跳羚属', 'Bovidae牛科', 'Antidorcas marsupialis', 88, '/images/animals/springbok.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Wildebeest角马', 'Connochaetes角马属', 'Bovidae牛科', 'Antilope gnu', 81, '/images/animals/wildebeest.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Blackbuck印度黑羚', 'Antilope真羚属', 'Bovidae牛科', 'Antilope cervicapra', 80, '/images/animals/blackbuck.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
