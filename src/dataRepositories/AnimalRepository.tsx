@@ -58,6 +58,7 @@ export const getAnimals = (): Array<Animal> => {
     add('Tiger老虎', 'Panthera豹属', 'Felidae猫科', 'Panthera tigris', 64, '/images/animals/tiger.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Spotted hyena斑鬣狗', 'Crocuta斑鬣狗属', 'Hyaenidae鬣狗科', 'Crocuta crocuta', 60, '/images/animals/spottedhyena.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Giraffe长颈鹿', 'Giraffa长颈鹿属', 'Giraffidae长颈鹿科', 'Giraffa tippelskirchi', 60, '/images/animals/giraffe.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
+    add('Sika deer梅花鹿', 'Cervus鹿属', 'Cervidae鹿科', 'Cervus nippon', 60, '/images/animals/sikadeer.png', 'https://en.wikipedia.org/wiki/Sika_deer');
     add('African buffalo非洲水牛', 'Syncerus非洲水牛属', 'Bovidae牛科', 'Syncerus caffer', 56, '/images/animals/africanbuffalo.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('Brown bear棕熊', 'Ursus熊属', 'Ursidae熊科', 'Ursus arctos', 56, '/images/animals/brownbear.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
     add('American black bear美洲黑熊', 'Ursus熊属', 'Ursidae熊科', 'Ursus americanus', 56, '/images/animals/americanblackbear.jpeg', 'https://en.wikipedia.org/wiki/Fastest_animals');
@@ -74,6 +75,7 @@ export const getAnimals = (): Array<Animal> => {
     add('King cobra眼镜王蛇', 'Ophiophagus眼镜王蛇属', 'Elapidae眼镜蛇科', 'Ophiophagus hannah', 20, '/images/animals/kingcobra.png', 'https://zh.wikipedia.org/wiki/%E7%9C%BC%E9%8F%A1%E7%8E%8B%E8%9B%87');
     add('Chinese water dragon长鬣蜥', 'Physignathus长鬣蜥属', 'Agamidae旧大陆鬣蜥科', 'Physignathus cocincinus', 15, '/images/animals/chinesewaterdragon.png', 'https://zh.wikipedia.org/wiki/%E9%95%BF%E9%AC%A3%E8%9C%A5');
     add('Emperor penguin帝企鹅', 'Aptenodytes帝企鹅属', 'Spheniscidae企鹅科', 'Aptenodytes forsteri', 9, '/images/animals/emperorpenguin.png', 'https://zh.wikipedia.org/wiki/%E5%B8%9D%E9%B9%85');
+    add('African pygmy squirrel非洲侏儒松鼠', 'Myosciurus侏儒松鼠属', 'Sciuridae松鼠科', 'Myosciurus pumilio', 5, '/images/animals/squirrel.png', 'https://en.wikipedia.org/wiki/African_pygmy_squirrel');
 
     return animalList;
 };
